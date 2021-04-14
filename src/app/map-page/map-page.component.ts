@@ -19,8 +19,14 @@ export class MapPageComponent implements OnInit {
   constructor() { }
 
   map: Map;
-
   locationForm: FormGroup;
+
+  stage = 0;
+
+  autoComplets: string[] = [
+    'Mong Kok Station',
+    'Mong Kok East Station'
+  ]
 
   ngOnInit(): void {
     this.map = new Map({
@@ -44,7 +50,14 @@ export class MapPageComponent implements OnInit {
   }
 
   searchVan(): void {
-    
+    if(this.locationForm.invalid){
+      return;
+    }
+    this.stage = 1;
+
+    setTimeout(() => {
+      this.stage = 2;
+    }, 6204)
   }
 
 }

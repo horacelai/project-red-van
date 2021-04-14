@@ -4,15 +4,26 @@
 <div class="map-container">
     <div id="road_map"></div>
     <div class="content">
-        <h3>Where do you want to travel to?</h3>
-        <div class="from-msg">From: Current Location</div>
-        <form [formGroup]="locationForm" (submit)="searchVan()">
-            <mat-form-field class="dest-input">
-                <mat-label>Enter Destination</mat-label>
-                <input matInput placeholder="Mong Kok" formControlName="destination">
-                <mat-error *ngIf="locationForm.get('destination').hasError('required')">Required</mat-error>
-            </mat-form-field>
-            <button mat-raised-button type="submit" color="primary">Search For Van</button>
-        </form>
+        <ng-container *ngIf="stage === 0">
+            <h3>Where do you want to travel to?</h3>
+            <div class="from-msg">From: Current Location</div>
+            <form [formGroup]="locationForm" (submit)="searchVan()">
+                <mat-form-field class="dest-input">
+                    <mat-label>Enter Destination</mat-label>
+                    <input matInput placeholder="Mong Kok" formControlName="destination" [matAutocomplete]="auto">
+                    <mat-error *ngIf="locationForm.get('destination').hasError('required')">Required</mat-error>
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of autoComplets" [value]="option">
+                        {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+                <button mat-raised-button type="submit" color="primary">Search For Van</button>
+            </form>
+        </ng-container>
+        <ng-container *ngIf="stage === 1">
+            <h3>We are searching the best ride for you...</h3>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </ng-container>
     </div>
 </div>
