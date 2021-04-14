@@ -45,7 +45,8 @@ export class MapPageComponent implements OnInit {
     });
 
     this.locationForm = new FormGroup({
-      destination: new FormControl('', [Validators.required])
+      destination: new FormControl('', [Validators.required]),
+      seats: new FormControl('', Validators.required)
     })
   }
 

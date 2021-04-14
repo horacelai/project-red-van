@@ -18,6 +18,18 @@
                         </mat-option>
                     </mat-autocomplete>
                 </mat-form-field>
+                <mat-form-field class="seats">
+                    <mat-label>Number of Seats</mat-label>
+                    <mat-select formControlName="seats">
+                      <mat-option [value]="1">1</mat-option>
+                      <mat-option [value]="2">2</mat-option>
+                      <mat-option [value]="3">3</mat-option>
+                      <mat-option [value]="4">4</mat-option>
+                      <mat-option [value]="5">5</mat-option>
+                      <mat-option [value]="6">6</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="locationForm.get('destination').hasError('required')">Required</mat-error>
+                  </mat-form-field>
                 <button mat-raised-button type="submit" color="primary">Search For Van</button>
             </form>
         </ng-container>
