@@ -1,1 +1,13 @@
-<p>itinerary-page works!</p>
+<div id="root">
+    <mat-card *ngFor="let post of posts">
+        <mat-card-title>{{post.name}}</mat-card-title>
+        <mat-card-subtitle>
+            {{post.type}}
+            <span *ngIf="post.time">: {{post.time}}</span>
+        </mat-card-subtitle>
+        <mat-card-content>
+            {{post.description}}
+        </mat-card-content>
+        <img mat-card-image *ngIf="post.image" [src]="post.image">
+    </mat-card>
+</div>
