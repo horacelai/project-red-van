@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -19,6 +20,8 @@ export class MapPageComponent implements OnInit {
 
   map: Map;
 
+  locationForm: FormGroup;
+
   ngOnInit(): void {
     this.map = new Map({
       target: 'road_map',
@@ -34,6 +37,14 @@ export class MapPageComponent implements OnInit {
         maxZoom: 14,
       })
     });
+
+    this.locationForm = new FormGroup({
+      destination: new FormControl('', [Validators.required])
+    })
+  }
+
+  searchVan(): void {
+    
   }
 
 }

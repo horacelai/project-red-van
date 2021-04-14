@@ -1,3 +1,18 @@
+<mat-toolbar class="header" color="primary">
+    Project Red Van
+</mat-toolbar>
 <div class="map-container">
     <div id="road_map"></div>
+    <div class="content">
+        <h3>Where do you want to travel to?</h3>
+        <div class="from-msg">From: Current Location</div>
+        <form [formGroup]="locationForm" (submit)="searchVan()">
+            <mat-form-field class="dest-input">
+                <mat-label>Enter Destination</mat-label>
+                <input matInput placeholder="Mong Kok" formControlName="destination">
+                <mat-error *ngIf="locationForm.get('destination').hasError('required')">Required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button type="submit" color="primary">Search For Van</button>
+        </form>
+    </div>
 </div>
