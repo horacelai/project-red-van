@@ -1,13 +1,19 @@
-<div id="root">
-    <mat-card *ngFor="let post of posts">
-        <mat-card-title>{{post.name}}</mat-card-title>
+<mat-toolbar class="header" color="primary">
+    <span>Project Red Van</span>
+    <button mat-icon-button class="">
+        <mat-icon>search</mat-icon>
+    </button>
+</mat-toolbar>
+<div id="content">
+    <mat-card *ngFor="let event of events" [routerLink]="['/event', event.id]">
+        <mat-card-title>{{event.name}}</mat-card-title>
         <mat-card-subtitle>
-            {{post.type}}
-            <span *ngIf="post.time">: {{post.time}}</span>
+            {{event.type}}
+            <span *ngIf="event.time">: {{event.time}}</span>
         </mat-card-subtitle>
         <mat-card-content>
-            {{post.description}}
-        </mat-card-content>
-        <img mat-card-image *ngIf="post.image" [src]="post.image">
+            {{event.description}}
+        </mat-card-content> 
+        <img mat-card-image *ngIf="event.image" [src]="event.image">
     </mat-card>
 </div>

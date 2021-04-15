@@ -5,13 +5,15 @@ import { IndexPageComponent } from './index-page/index-page.component';
 import { ItineraryPageComponent } from './itinerary-page/itinerary-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { MilesPageComponent } from './miles-page/miles-page.component';
+import { EventPageComponent } from './event-page/event-page.component';
 
 const routes: Routes = [
   {path: '', component: IndexPageComponent},
   {path: 'guide', component: GuidePageComponent},
-  {path: 'intinery', component: ItineraryPageComponent},
+  {path: 'itinerary', component: ItineraryPageComponent},
   {path: 'map', component: MapPageComponent},
   {path: 'miles', component: MilesPageComponent},
+  {path: 'event/:id', component: EventPageComponent},
 ];
 
 @NgModule({
