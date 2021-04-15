@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import events from 'src/assets/data/events.json';
 
@@ -10,11 +11,20 @@ import events from 'src/assets/data/events.json';
 export class EventPageComponent implements OnInit {
 
   event;
+  favorite = false;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private _location: Location) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.event = events[id];
+  }
+
+  onClickBack(): void {
+    this._location.back();
+  }
+
+  onClickFavorite(): void {
+    this.favorite = !this.favorite;
   }
 }

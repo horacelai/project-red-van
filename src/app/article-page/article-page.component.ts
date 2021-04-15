@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import articles from 'src/assets/data/articles.json';
 
@@ -10,12 +11,20 @@ import articles from 'src/assets/data/articles.json';
 export class ArticlePageComponent implements OnInit {
 
   article;
+  favorite = false;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private _location: Location) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.article = articles[id];
   }
 
+  onClickBack(): void {
+    this._location.back();
+  }
+
+  onClickFavorite(): void {
+    this.favorite = !this.favorite;
+  }
 }

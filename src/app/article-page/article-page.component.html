@@ -1,5 +1,12 @@
 <mat-toolbar class="header" color="primary">
+    <button mat-icon-button (click)="onClickBack()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
     <span>Project Red Van</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="onClickFavorite()">
+        <mat-icon>{{favorite ? 'star' : 'star_border'}}</mat-icon>
+    </button>
 </mat-toolbar>
 <div id="content">
     <img [src]="article.image" mat-elevation-z5 />
