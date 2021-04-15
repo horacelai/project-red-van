@@ -22,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { EventPageComponent } from './event-page/event-page.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { BottomNavModule } from 'ngx-bottom-nav';
+import { ArticlePageComponent } from './article-page/article-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BottomNavModule } from 'ngx-bottom-nav';
     ItineraryPageComponent,
     MilesPageComponent,
     EventPageComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    ArticlePageComponent
   ],
   imports: [
     BrowserModule,
