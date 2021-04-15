@@ -13,7 +13,7 @@ export class EventPageComponent implements OnInit {
   event;
   favorite = false;
 
-  constructor(private route: ActivatedRoute, private _location: Location) { }
+  constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -21,7 +21,7 @@ export class EventPageComponent implements OnInit {
   }
 
   onClickBack(): void {
-    this._location.back();
+    this.location.back();
   }
 
   onClickFavorite(): void {

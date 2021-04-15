@@ -23,6 +23,7 @@ import { EventPageComponent } from './event-page/event-page.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { BottomNavModule } from 'ngx-bottom-nav';
 import { ArticlePageComponent } from './article-page/article-page.component';
+import { SchedulePageComponent } from './schedule-page/schedule-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ArticlePageComponent } from './article-page/article-page.component';
     MilesPageComponent,
     EventPageComponent,
     BottomNavComponent,
-    ArticlePageComponent
+    ArticlePageComponent,
+    SchedulePageComponent
   ],
   imports: [
     BrowserModule,

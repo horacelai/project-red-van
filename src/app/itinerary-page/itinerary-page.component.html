@@ -14,8 +14,11 @@
         </mat-card-subtitle>
         <mat-card-content>
             {{event.description.substring(0, 100)}}...
-        </mat-card-content> 
+        </mat-card-content>
         <img mat-card-image *ngIf="event.image" [src]="event.image">
     </mat-card>
 </div>
+<button mat-fab color="primary" routerLink="/schedule">
+    <mat-icon>event_available</mat-icon>
+</button>
 <app-bottom-nav></app-bottom-nav>

@@ -1,0 +1,26 @@
+<mat-toolbar class="header" color="primary">
+    <button mat-icon-button (click)="onClickBack()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Project Red Van</span>
+    <span class="spacer"></span>
+    <button mat-icon-button>
+        <mat-icon>search</mat-icon>
+    </button>
+</mat-toolbar>
+<div id="content">
+    <div class="day-container" *ngFor="let day of schedule">
+        <div class="date-container">
+            <h1>{{day.date}}</h1>
+            <h4>{{day.dayOfWeek}}</h4>
+        </div>
+        <div class="event-container">
+            <mat-card *ngFor="let event of day.events">
+                <mat-card-title>{{event.name}}</mat-card-title>
+                <mat-card-subtitle>
+                    {{event.startTime}} - {{event.endTime}}
+                </mat-card-subtitle>
+            </mat-card>
+        </div>
+    </div>
+</div>

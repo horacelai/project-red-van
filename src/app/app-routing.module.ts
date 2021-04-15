@@ -6,6 +6,7 @@ import { MapPageComponent } from './map-page/map-page.component';
 import { MilesPageComponent } from './miles-page/miles-page.component';
 import { EventPageComponent } from './event-page/event-page.component';
 import { ArticlePageComponent } from './article-page/article-page.component';
+import { SchedulePageComponent } from './schedule-page/schedule-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'map', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'miles', component: MilesPageComponent },
   { path: 'event/:id', component: EventPageComponent },
   { path: 'article/:id', component: ArticlePageComponent },
+  { path: 'schedule', component: SchedulePageComponent },
 ];
 
 @NgModule({
