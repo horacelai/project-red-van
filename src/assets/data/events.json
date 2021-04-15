@@ -2,20 +2,20 @@
     {
       "name": "Ocean Park",
       "type": "Theme Park",
-      "description": "Mixing the elements of eco-conservation and water park, Ocean Park was beloved by tourists...",
+      "description": "As Hong Kong’s longest-running family-friendly theme park, Ocean Park Hong Kong is a treasured attraction where many locals have created special childhood memories they hold close to their hearts. With fun activities and thrill rides, dining spots, and even educational options all packed into one convenient setting, Ocean Park makes for a perfect day trip for both families in the city as well as travellers who wish to experience a true, authentic Hong Kong with their younglings.",
       "image": "assets/img/ocean-park.jpg"
     },
     {
       "name": "A Glimpse of Local Livelihood: Tai Po",
       "type": "Tour",
       "time": "Tomorrow 3pm to 5pm",
-      "description": "Become acquainted with the history, culture and cuisine of Tai Po by experiencing it alongside the locals as they...",
+      "description": "Become acquainted with the history, culture and cuisine of Tai Po by experiencing it alongside the locals as they go about their day, eating, shopping and praying. Discover the past, present and sustainable future of this fascinating historical gem hidden in the middle of a modern city.",
       "image": "assets/img/tai-po-tour.jpg"
     },
     {
       "name": "Avenue of Stars",
       "type": "Scenic Attractions",
-      "description": "Hong Kong\"s Avenue of Stars is where you\"ll find the city\"s biggest entertainment stars immortalised via handprints and statues. It\"s...",
+      "description": "Originally modelled on Hollywood’s Walk of Fame, the storied promenade that wraps around Tsim Sha Tsui’s southern border is where you’ll find Hong Kong’s biggest entertainment stars immortalised via celebrity handprints and statues. Reopened in 2019 following an extensive redesign led by landscape architect James Corner, the Avenue of Stars is a celebration of the city’s artistic offerings and elemental aesthetics. ",
       "image": "assets/img/avenue-of-stars.jpg"
     }
   ]

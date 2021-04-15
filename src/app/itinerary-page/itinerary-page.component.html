@@ -12,7 +12,7 @@
             <span *ngIf="event.time">: {{event.time}}</span>
         </mat-card-subtitle>
         <mat-card-content>
-            {{event.description}}
+            {{event.description.substring(0, 100)}}...
         </mat-card-content> 
         <img mat-card-image *ngIf="event.image" [src]="event.image">
     </mat-card>
