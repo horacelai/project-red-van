@@ -7,7 +7,6 @@ import { MapPageComponent } from './map-page/map-page.component';
 import { GuidePageComponent } from './guide-page/guide-page.component';
 import { ItineraryPageComponent } from './itinerary-page/itinerary-page.component';
 import { MilesPageComponent } from './miles-page/miles-page.component';
-import { IndexPageComponent } from './index-page/index-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -21,6 +20,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { EventPageComponent } from './event-page/event-page.component';
+import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
+import { BottomNavModule } from 'ngx-bottom-nav';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,8 @@ import { EventPageComponent } from './event-page/event-page.component';
     GuidePageComponent,
     ItineraryPageComponent,
     MilesPageComponent,
-    IndexPageComponent,
-    EventPageComponent
+    EventPageComponent,
+    BottomNavComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,8 @@ import { EventPageComponent } from './event-page/event-page.component';
     MatAutocompleteModule,
     MatProgressBarModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    BottomNavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
