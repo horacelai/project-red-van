@@ -21,7 +21,7 @@ export class MapPageComponent implements OnInit {
   map: Map;
   locationForm: FormGroup;
 
-  stage = 2;
+  stage = 0;
 
   autoComplets: string[] = [
     'Mong Kok Station',
@@ -55,10 +55,19 @@ export class MapPageComponent implements OnInit {
       return;
     }
     this.stage = 1;
+    this.map.getView().setCenter(olProj.fromLonLat([114.16946685855292, 22.317797161286514]));
 
     setTimeout(() => {
       this.stage = 2;
-    }, 6204)
+      this.map.getView().setCenter(olProj.fromLonLat([114.17137519525527, 22.302817478106366]));
+      this.map.getView().setZoom(14);
+    }, 3204);
+  }
+
+  confirmRide(): void {
+    this.stage = 3;
+    this.map.getView().setCenter(olProj.fromLonLat([114.1752247521669, 22.29544916416104]));
+    this.map.getView().setZoom(18);
   }
 
 }

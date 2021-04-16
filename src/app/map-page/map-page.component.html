@@ -40,12 +40,31 @@
         <ng-container *ngIf="stage === 2">
             <h3>We have got a van for you.</h3>
             <div class="van-details">
-                <div>From: Tsim Sha Tsui Star Ferry Pier</div>
-                <div>To: {{locationForm.get('destination').value}}</div>
+                <div class="title">From: Tsim Sha Tsui Star Ferry Pier</div>
+                <div class="title">To: {{locationForm.get('destination').value}}</div>
 
-                <div>
+                <div class="det">
                     <div>{{locationForm.get('seats').value}} people</div>
                     <div>$12</div>
+                    <div>ETA: 2:23pm</div>
+                </div>
+            </div>
+            <button mat-raised-button class="confirm-btn" type="submit" color="primary" (click)="confirmRide()">Confirm Booking</button>
+        </ng-container>
+        <ng-container *ngIf="stage === 3">
+            <div class="arrival-time">
+                <h3>Arriving In</h3>
+                <div>3 mins</div>
+            </div>
+            <div class="van-details">
+                <div class="title">From: Tsim Sha Tsui Star Ferry Pier</div>
+                <div class="title">To: {{locationForm.get('destination').value}}</div>
+
+                <div class="det">
+                    <div>{{locationForm.get('seats').value}} people</div>
+                    <div>$12</div>
+                    <div>ETA: 2:23pm</div>
+                    <div>EX 2464</div>
                 </div>
             </div>
         </ng-container>

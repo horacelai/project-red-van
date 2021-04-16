@@ -8,6 +8,7 @@ import { GuidePageComponent } from './guide-page/guide-page.component';
 import { ItineraryPageComponent } from './itinerary-page/itinerary-page.component';
 import { MilesPageComponent } from './miles-page/miles-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatRippleModule} from '@angular/material/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,6 +25,7 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { BottomNavModule } from 'ngx-bottom-nav';
 import { ArticlePageComponent } from './article-page/article-page.component';
 import { SchedulePageComponent } from './schedule-page/schedule-page.component';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { SchedulePageComponent } from './schedule-page/schedule-page.component';
     MatProgressBarModule,
     MatSelectModule,
     MatIconModule,
-    BottomNavModule
+    BottomNavModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

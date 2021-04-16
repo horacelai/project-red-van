@@ -6,7 +6,7 @@
     </button>
 </mat-toolbar>
 <div id="content">
-    <mat-card *ngFor="let event of events" [routerLink]="['/event', event.id]">
+    <mat-card matRipple *ngFor="let event of events" [routerLink]="['/event', event.id]">
         <mat-card-title>{{event.name}}</mat-card-title>
         <mat-card-subtitle>
             {{event.type}}

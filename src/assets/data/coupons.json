@@ -1,23 +1,31 @@
 [
     {
         "name": "Disneyland",
+        "subtitle": "$100 Ticket Voucher",
         "amount": "$100",
         "image": "assets/img/disneyland.jpg",
+        "points": "300",
         "description": ""
     },
     {
         "name": "Van Go Far",
+        "subtitle": "$20 Ride Coupon",
         "amount": "$20",
+        "points": "100",
         "image": "assets/img/van.png"
     },
     {
         "name": "Noah's Ark",
+        "subtitle": "$80 Ticket Voucher",
         "amount": "$80",
+        "points": "280",
         "image": "assets/img/noah-ark.png"
     },
     {
         "name": "Van Go Far",
+        "subtitle": "$20 Ride Coupon",
         "amount": "$20",
+        "points": "100",
         "image": "assets/img/van.png"
     }
 ]
