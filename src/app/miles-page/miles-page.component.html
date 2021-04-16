@@ -1,2 +1,37 @@
-<p>miles-page works!</p>
+<mat-toolbar class="header" color="primary">
+    <mat-toolbar-row>
+        <span>Project Red Van</span>
+        <span class="spacer"></span>
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <p>
+            <span id="points-span">721</span>
+            <span id="points-text-span"> points</span>
+        </p>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div id="content">
+    <mat-card *ngFor="let coupon of coupons">
+        <div>
+            <div>
+                <div class="card-title-row">
+                    <div>
+                        <img [src]="coupon.image">
+                    </div>
+                    <h1>{{coupon.name}}</h1>
+                </div>
+            </div>
+            <div>
+                <h1 class="card-amount-header">{{coupon.amount}}</h1>
+            </div>
+        </div>
+        <mat-card-actions align="end">
+            <button mat-button color="primary">Use</button>
+            <button mat-button>Info</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
 <app-bottom-nav></app-bottom-nav>
