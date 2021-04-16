@@ -1,5 +1,5 @@
 <mat-toolbar class="header" color="primary">
-    Project Red Van
+    Van Go Far
 </mat-toolbar>
 <div class="map-container">
     <div id="road_map"></div>
@@ -36,6 +36,18 @@
         <ng-container *ngIf="stage === 1">
             <h3>We are searching the best ride for you...</h3>
             <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </ng-container>
+        <ng-container *ngIf="stage === 2">
+            <h3>We have got a van for you.</h3>
+            <div class="van-details">
+                <div>From: Tsim Sha Tsui Star Ferry Pier</div>
+                <div>To: {{locationForm.get('destination').value}}</div>
+
+                <div>
+                    <div>{{locationForm.get('seats').value}} people</div>
+                    <div>$12</div>
+                </div>
+            </div>
         </ng-container>
     </div>
 </div>

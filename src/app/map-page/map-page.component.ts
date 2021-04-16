@@ -21,7 +21,7 @@ export class MapPageComponent implements OnInit {
   map: Map;
   locationForm: FormGroup;
 
-  stage = 0;
+  stage = 2;
 
   autoComplets: string[] = [
     'Mong Kok Station',
@@ -37,10 +37,10 @@ export class MapPageComponent implements OnInit {
         })
       ],
       view: new View({
-        center: olProj.fromLonLat([114.1764513,22.2995565]),
+        center: olProj.fromLonLat([114.16963040989398, 22.29130739530706]),
         zoom: 16,
-        minZoom: 18,
-        maxZoom: 14,
+        minZoom: 14,
+        maxZoom: 18,
       })
     });
 

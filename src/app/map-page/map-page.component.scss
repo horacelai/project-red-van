@@ -6,7 +6,7 @@
 
 .map-container{
     display: grid;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 50% 50%;
     grid-template-columns: 100%;
     flex: 1 0px;
 }
@@ -48,5 +48,8 @@
             margin-top: 5px;
             width: 300px;
         }
+    }
+    .van-details{
+        
     }
 }
