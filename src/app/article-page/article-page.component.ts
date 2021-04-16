@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import events from 'src/assets/data/events.json';
+import articles from 'src/assets/data/articles.json';
 
 @Component({
-  selector: 'app-event-page',
-  templateUrl: './event-page.component.html',
-  styleUrls: ['./event-page.component.scss']
+  selector: 'app-article-page',
+  templateUrl: './article-page.component.html',
+  styleUrls: ['./article-page.component.scss']
 })
-export class EventPageComponent implements OnInit {
+export class ArticlePageComponent implements OnInit {
 
-  event;
+  article;
   favorite = false;
 
   constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.event = events[id];
+    this.article = articles[id];
   }
 
   onClickBack(): void {

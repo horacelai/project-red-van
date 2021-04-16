@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import coupons from 'src/assets/data/coupons.json';
 
 @Component({
   selector: 'app-miles-page',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./miles-page.component.scss']
 })
 export class MilesPageComponent implements OnInit {
+
+  coupons = coupons;
 
   constructor() { }
 

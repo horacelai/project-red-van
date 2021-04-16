@@ -1,0 +1,51 @@
+#points-span {
+    font-size: 30px;
+    vertical-align: baseline;
+}
+#points-text-span {
+    font-size: 15px;
+    vertical-align: baseline;
+}
+
+#content {
+    display: block;
+    padding: 10px;
+    padding-bottom: 60px;
+}
+
+mat-toolbar-row {
+    p {
+        margin: 0px;
+    }
+}
+
+mat-card {
+    margin-top: 10px;
+    div:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.card-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    div {
+        height: 45px;
+        width: 45px;
+        margin-right: 10px;
+        img {
+            width: 100%;
+        }
+    }
+    h1 {
+        margin: 0px;
+    }
+}
+
+.card-amount-header {
+    margin: 0px;
+    font-weight: bold;
+}

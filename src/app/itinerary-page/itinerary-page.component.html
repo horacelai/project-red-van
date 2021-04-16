@@ -1,6 +1,7 @@
 <mat-toolbar class="header" color="primary">
-    <span>Van Go Far</span>
-    <button mat-icon-button class="">
+    <span>Project Red Van</span>
+    <span class="spacer"></span>
+    <button mat-icon-button>
         <mat-icon>search</mat-icon>
     </button>
 </mat-toolbar>
@@ -13,8 +14,11 @@
         </mat-card-subtitle>
         <mat-card-content>
             {{event.description.substring(0, 100)}}...
-        </mat-card-content> 
+        </mat-card-content>
         <img mat-card-image *ngIf="event.image" [src]="event.image">
     </mat-card>
 </div>
+<button mat-fab color="primary" routerLink="/schedule">
+    <mat-icon>event_available</mat-icon>
+</button>
 <app-bottom-nav></app-bottom-nav>

@@ -1,5 +1,12 @@
 <mat-toolbar class="header" color="primary">
-    <span>Van Go Far</span>
+    <button mat-icon-button (click)="onClickBack()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Project Red Van</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="onClickFavorite()">
+        <mat-icon>{{favorite ? 'star' : 'star_border'}}</mat-icon>
+    </button>
 </mat-toolbar>
 <div id="content">
     <img [src]="event.image" mat-elevation-z5 />
@@ -9,6 +16,6 @@
         <span *ngIf="event.time">: {{event.time}}</span>
     </h4>
     <p>{{event.description}}</p>
-    <button mat-raised-button color="primary">Add to itinerary</button>
-    <button mat-raised-button color="accent">Learn more</button>
+    <button mat-raised-button color="primary" routerLink="/schedule">Add to itinerary</button>
+    <a mat-raised-button color="accent" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Learn more</a>
 </div>

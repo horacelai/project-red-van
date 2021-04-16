@@ -4,7 +4,12 @@
     padding-bottom: 60px;
 }
 
+.mat-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+}
+
 mat-card {
-    display: block;
     margin-top: 10px;
 }
